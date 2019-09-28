@@ -1,0 +1,314 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<title>demo</title>
+		<style type="text/css">
+			body,p,ul,h1,h2,h3,h4,h5,h6{
+				margin: 0;
+			}
+			ul{
+				padding-left: 0;
+			}
+			li{
+				list-style: none;	
+			}
+			a{
+				text-decoration: none;
+			}
+			
+			.whole{
+				position: relative;
+				margin: 100px;
+			}
+
+			.head{
+				position: relative;
+				margin: 50px;
+				width: 302px;
+				height: 246px;
+				border: 8px solid #000;
+				border-radius: 45% 45% 45% 45% /45% 45% 45% 45%; 
+			}
+
+
+			/* eye start */
+			.head>.eye-left{
+				position: relative;
+				display: inline-block;
+				margin-left: 30px;
+				margin-top: 65px; 
+				width: 108px;
+				height: 60px;
+				background: #000;
+				border-radius: 95px 55px 60px 55px /45px 30px 40px 24px;
+			}
+			.head>.eye-left>div:nth-child(1){
+				position: absolute;
+				top: 20px;
+				left: 6px;
+				width: 22px;
+				height: 30px;
+				background: #fff;
+				border-radius: 10px 13px 15px 10px / 20px 13px 22px 13px;;
+			}
+			.head>.eye-left>div:nth-child(2){
+				position: absolute;
+				top: 8px;
+				left: 77px;
+				width: 25px;
+				height: 42px;
+				background: #fefefe;
+				border-radius: 20px 24px 29px 18px / 20px 48px 38px 48px;
+			}
+
+
+
+			.head>.eye-right{
+				position:  relative;
+				display: inline-block;
+				margin-left: 45px;
+				width: 90px;
+				height: 58px;
+				background: #000;
+				/* border-radius: 25px 45px 10px 10px/45px 45px 10px 10px; */
+				border-radius: 66px 56px 52px 39px/45px 45px 35px 36px;
+			}
+			.head>.eye-right>div:nth-child(1){
+				position: absolute;
+				top: 14px;
+				left: 8px;
+				width: 24px;
+				height: 40px;
+				background: #fff;
+				border-radius: 25px 26px 11px 29px / 25px 28px 32px 36px;
+			}
+			.head>.eye-right>div:nth-child(2){
+				position: absolute;
+				top: 12px;
+				left: 59px;
+				width: 24px;
+				height: 40px;
+				background: #fff;
+				border-radius: 9px 28px 22px 11px / 22px 34px 41px 33px;
+			}
+			/* eye end */
+
+			
+			/* mouth start */
+			.head>.mouth{
+				position: relative;
+				margin-top: 22px;
+				margin-left: 70px;
+				box-sizing: border-box;
+				width: 170px;
+				height: 86px;
+				border: 8px solid #000;
+				border-radius: 10px 10px 80px 80px
+			}
+			.head>.mouth>div{
+				box-sizing: border-box;
+				display: inline-block;
+				width: 40px;
+				font-size: 0;
+				/* height: 80%; */
+				border-right: 8px solid #000;
+			}
+			.head>.mouth>div:nth-child(1){
+				position: absolute;
+				top: 0;
+				height: 90%;
+			}
+			.head>.mouth>div:nth-child(2){
+				position: absolute;
+				top: 0;
+				left: 42px;
+				height: 70px;
+			}
+			.head>.mouth>div:nth-child(3){
+				position: absolute;
+				top: 0;
+				left: 85px;
+				height: 90%;
+			}
+			/* mouth end */
+			
+
+
+			.red{
+				position: absolute;
+				top: 88px;
+				width: 50px;
+				height: 35px;
+				background-color: transparent;
+				border-radius: 50%;
+				box-shadow: #edbcbb 40px 40px 15px ;
+			}
+			.red.left{
+				left: -30px;
+			}
+			.red.right{
+				left: 204px;
+			}
+
+			/* eyebrow start */
+			.whole>.head>.eyebrow{
+				
+				/* width: 30px;
+				height: 20px; */
+				background: #000;
+				border-width: 5px 12px;
+				border-style: solid;
+				border-color: #000;
+				border-radius: 28px 24px 22px 22px / 20px 20px 11px 18px;
+			}
+			.whole>.head>.eyebrow-left{
+				position: absolute;
+				top: 40px;
+				left: 56px;
+				transform: rotate(-30deg);
+			}
+			.whole>.head>.eyebrow-right{
+				position: absolute;
+				top: 38px;
+				left: 210px;
+				transform: rotate(30deg);
+			}
+			
+			/* eyebrow end */
+
+			/* body start */
+			.whole>.body{
+				position: absolute;
+				top: 225px;
+				left: 110px;
+				z-index: 1;
+				width: 190px;
+				height: 100px;
+				/* background: red; */
+				border: 8px solid #000;
+				border-top-color: transparent;
+				border-bottom-color: transparent;
+				border-radius:26px 17px 15px 6px/50px 50px 50px 50px;
+				z-index: 3;
+			}
+			.whole>.body>div{
+				margin-top: 36px; 
+				height: 80%;
+				width: 90%;
+				background: #fff;
+				border: 8px solid #fff;
+				/* border-radius:26px 17px 15px 0px/50px 50px 50px 50px; */
+				border-radius: 132px 108px 15px 0px/70px 50px 50px 50px;
+			}
+			
+			/* body end */
+
+			/* cover start*/
+			.whole>.cover>.cover-1{
+				position: absolute;
+				top: 247px;
+				left: 126px;
+				width: 172px;
+				height: 16px;
+				background: #fff;
+				/* border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px; */
+			}
+			.whole>.cover>.cover-2{
+				position: absolute;
+				top: 234px;
+				left: 122px;
+				width: 32px;
+				height: 26px;
+				background: #fff;
+				border-radius: 21px 1px 1px 48px/23px 1px 1px 27px; 
+			}
+			.whole>.cover>.cover-3{
+				position: absolute;
+				top: 234px;
+				left: 266px;
+				width: 40px;
+				height: 28px;
+				background: #fff;
+				border-radius: 11px 8px 1px 1px/7px 16px 1px 1px;
+			}
+			.whole>.cover>.cover-4{
+				position: absolute;
+				top: 241px;
+				left: -38px;
+				width: 200px;
+				height: 250px;
+				background: #fff;
+				z-index: 2;
+			}
+			/* cover end*/
+
+
+			/* hand start */
+			.whole > .hand{
+				/* position: absolute;
+				top: 253px;
+				left: -33px;
+				width: 300px;
+				height: 100px;
+				background: red;
+				border: 8px solid #000;
+				border-radius: 50px 165px 70px 50px / 50px 50px 50px 50px;
+				transform: rotate(-40deg);
+				z-index: 1; */
+
+				position: absolute;
+				top: 261px;
+				left: -55px;
+				width: 300px;
+				height: 60px;
+				background: #fff;
+				border: 8px solid #000;
+				border-radius: 56px 111px 133px 50px / 51px 65px 61px 50px;
+				transform: rotate(-40deg);
+				z-index: 1;
+			}
+			/* hand end*/
+		</style>
+	</head>
+	<body>
+		<div class="whole">
+			<div class="head">
+				<div class="eye-left">
+					<div></div>
+					<div></div>
+				</div>
+				<div class="eye-right">
+					<div></div>
+					<div></div>
+				
+				</div>
+				<div class="mouth">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="red left"></div>
+				<div class="red right"></div>
+				<div class="eyebrow eyebrow-left"></div>
+				<div class="eyebrow eyebrow-right"></div>
+			</div>
+
+			<div class="body">
+				<div>
+					
+				</div>
+			</div>
+			<div class="hand"></div>
+			<div class="cover">
+				<div class="cover-1"></div>
+				<div class="cover-2"></div>
+				<div class="cover-3"></div>
+				<div class="cover-4"></div>
+			</div>
+			
+		</div>
+	</body>
+</html>

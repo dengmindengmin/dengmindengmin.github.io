@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+	<head >
+		<meta charset="utf-8">
+		<meta name="keywords" content="熊猫">
+		<meta name="description" content="熊猫">
+		<title>熊猫</title>
+		<style>
+			body{
+				margin:0;
+			}
+			/*大边框样式*/
+			.wrap{
+				margin: 10px auto;
+				width: 1000px;
+				height: 1000px;
+				border-radius: 50%;
+				background-color: #4b61a5;
+				border: 1px solid;
+			}
+			/* 脑袋以上 */
+			.big-head{
+				position: relative;
+				margin: 100px auto 0;
+				width: 580px;
+				height: 380px;
+			}
+			/* 耳朵 */
+			.ear{
+				width: 110px;
+				height: 90px;
+				border-radius: 50%;
+				background-color: #000;
+			}
+			.ear-right{
+				position: absolute;
+				top: 5px;
+				right: 5px;
+			}
+			.ear-left{
+				position: absolute;
+				top: 5px;
+				left: 5px;
+			}
+			/* 脑袋 */
+			.head{
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				margin: auto;
+				width: 518px;
+				height: 372px;
+				border-radius: 50%;
+				background: #fff;
+				z-index: 5;
+			}
+			/* 黑眼圈 */
+			.bigeyes{
+				position: absolute;
+				width: 190px;
+				height: 190px;
+				border-radius: 50%;
+				background-color: #000;
+			}
+			.bigeyes-right{
+				top: 70px;
+				right: 20px;
+			}
+			.bigeyes-left{
+				top: 70px;
+				left: 20px;
+			}
+			/* 眼球 */
+			.mideyes{
+				position: absolute;
+				width: 102px;
+				height: 112px;
+				border-radius: 50%;
+				background-color: #fff;
+			}
+			.mideyes-left{
+				top: 50px;
+				right: 10px;
+			}
+			.mideyes-right{
+				top: 50px;
+				left: 10px;
+			}
+			/* 眼珠 */
+			.smeyes{
+				position: absolute;
+				width: 60px;
+				height: 70px;
+				border-radius: 50%;
+				background-color: #000;
+			}
+			/* 鼻子 */
+			.nose{
+				position: absolute;
+				top: 168px;
+				left: 198px;
+				width: 86px;
+				height: 28px;
+				border-radius: 50%;
+				background: #000;
+			}
+			/* 领带 */
+			.tie{
+				position: absolute;
+				left: 50%;
+				bottom: -10px;
+				margin-left: -105px;
+				width: 200px;
+				height: 20px;
+				border-radius: 15px;
+				background-color: #000;
+			}
+			/* 铃铛整体 */
+			.bell{
+				position: absolute;
+				left: 50%;
+				bottom: -95px;
+				margin-left: -50px;
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				border: 3px solid black;
+				background-color: #ff0;
+
+			}/* 横着部分 */
+			.rail{
+				position: absolute;
+				top: 23px;
+				left: 5px;
+				width: 86px;
+				height: 5px;
+				border-radius: 5px;
+				border: 3px solid black;
+				background-color: #ff0;
+			}
+			/* 中间球体 */
+			.quanquan{
+				position: absolute;
+				top: 33px;
+				left: 23px;
+				width: 47px;
+				height: 47px;
+				border-radius: 50%;
+				border: 3px solid black;
+				background-color: #AAA7AE;
+			}
+			/* 竖着部分 */
+			.string{
+				position: absolute;
+				bottom: 0;
+				left: 47px;
+				width: 5px;
+				height: 17px;
+				background-color: #000;
+			}
+			.big-body{
+				position: relative;
+				width: 1000px;
+				height: 500px;
+			}
+			/* 身体*/
+			.body{
+				position: absolute;
+				top: -80px;
+				left: 50%;
+				margin-left: -250px;
+				width: 500px;
+				height: 500px;
+				border-radius: 50%;
+				background-color: #eee;
+				z-index: 4;
+			}
+			/* 太极图整体 */
+			.taiji{
+				position: absolute;
+				top: 50%;
+				right: 50%;
+				margin-right: -100px;
+				width: 0;
+				height: 200px;
+				border-left: 100px solid #fff;
+				border-right: 100px solid #000;
+				border-radius: 50%;
+				background-color: #fff;
+			}
+			/* 上面白球 */
+			.rdn-top{
+				position: absolute;
+				left: -50px;
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				background-color: #fff;
+			}
+			/* 下面黑球 */
+			.rdn-bottom{
+				position: absolute;
+				left: -50px;
+				bottom: 0;
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				background-color: #000;
+			}
+			/* 上面小黑球 */
+			.sm-rdn-top{
+				position: absolute;
+				top: 40px;
+				left: 40px;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: #000;
+			}
+			/* 下面小白球 */
+			.sm-rdn-bottom{
+				position: absolute;
+				bottom: 40px;
+				left: 40px;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: #fff;
+			}
+			/* 手爪爪 */
+			.hand{
+				position: absolute;
+				width: 320px;
+				height: 130px;
+				border-radius: 50%;
+				background-color: #000;
+				z-index: 3;
+			}
+			.hand-left{
+				left: 580px;
+			}
+			.hand-right{
+				right: 580px;
+			}
+			/* 猪蹄子 */
+			.foot{
+				position: absolute;
+				width: 130px;
+				height: 320px;
+				border-radius: 50%;
+				background-color: #000;
+				z-index: 3;
+			}
+			.foot-left{
+				bottom: 0;
+				left: 300px;
+			}
+			.foot-right{
+				bottom: 0;
+				right: 300px;
+			}
+			/* 棒棒糖橙色部分 */
+			.lollipop{
+				position: absolute;
+				top: -210px;
+				right: 45px;
+				width: 160px;
+				height: 160px;
+				border-radius: 50%;
+				background-color: #cc2c07;
+			}
+			/* 黄色部分 */
+			.yellow{
+				position: absolute;
+				top: 20px;
+				left: 20px;
+				width: 120px;
+				height: 120px;
+				border-radius: 50%;
+				background-color: #e5b90d;
+			}
+			/* 绿色部分 */
+			.green{
+				position: absolute;
+				top: 30px;
+				left: 30px;
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				background-color: #390;
+			}
+			/* 浅蓝色部分 */
+			.light-blue{
+				position: absolute;
+				top: 40px;
+				left: 40px;
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				background-color: #3f8da2;	
+			}
+			/* 深蓝色部分 */
+			.dark-blue{
+				position: absolute;
+				top: 50px;
+				left: 50px;
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				background-color: #0c0641;	
+			}
+			/* 红色部分 */
+			.red{
+				position: absolute;
+				top: 70px;
+				left: 70px;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: #f00;
+			}
+			/* 帮帮糖棍子 */
+			.club{
+				position: absolute;
+				top: 160px;
+				left: 50%;
+				margin-left: -6px;
+				width: 12px;
+				height: 210px;
+				background-color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="big-head">
+				<div class="ear ear-right">
+				</div>
+				<div class="ear ear-left">
+				</div>
+				<div class="head">
+					<div class="bigeyes bigeyes-right">
+						<div class="mideyes mideyes-right">
+							<div class="smeyes"></div>
+						</div>
+					</div>
+					<div class="bigeyes bigeyes-left">
+						<div class="mideyes mideyes-left">
+							<div class="smeyes"></div>
+						</div>
+					<div class="nose"></div>
+					</div>
+				
+					<div class="tie"></div>
+					<div class="bell">
+						<div class="rail"></div>
+						<div class="quanquan"></div>
+						<div class="string"></div>
+					</div>
+				</div>
+			</div>
+			<div class="big-body">
+				<div class="body">
+					<div class="taiji">
+						<div class="rdn-top">
+							<div class="sm-rdn-top"></div>
+						</div>
+						<div class="rdn-bottom">
+							<div class="sm-rdn-bottom"></div>
+						</div>
+					</div>
+				</div>
+				<div class="hand hand-left"></div>
+				<div class="hand hand-right"></div>
+				<div class="foot foot-left"></div>
+				<div class="foot foot-right"></div>
+				<div class="lollipop">
+					<div class="yellow"></div>
+					<div class="green"></div>
+					<div class="light-blue"></div>
+					<div class="dark-blue"></div>
+					<div class="red"></div>
+					<div class="club"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
